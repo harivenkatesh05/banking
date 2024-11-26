@@ -19,6 +19,14 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        26: '26px',
+        24: '24px',
+        16: '16px',
+      },
+      borderWidth: {
+        8: "8px",
+      },
       colors: {
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
@@ -58,6 +66,7 @@ const config = {
         black: {
           1: "#00214F",
           2: "#344054",
+		      3: "#00214F",
         },
         gray: {
           25: "#FCFCFD",
