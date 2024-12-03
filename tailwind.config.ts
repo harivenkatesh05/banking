@@ -23,6 +23,8 @@ const config = {
         26: '26px',
         24: '24px',
         16: '16px',
+        14: '14px',
+        12: '12px',
       },
       borderWidth: {
         8: "8px",
