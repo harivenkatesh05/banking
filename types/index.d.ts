@@ -30,3 +30,37 @@ declare interface RightSidebarProps {
 	user : User
 	accounts: Account[]
 }
+
+declare interface signInProps {
+	email: string;
+  	password: string;
+}
+
+
+declare type SignUpParams = {
+	firstName: string;
+	lastName: string;
+	address1: string;
+	city: string;
+	state: string;
+	postalCode: string;
+	dateOfBirth: string;
+	ssn: string;
+	email: string;
+	password: string;
+};
+
+
+declare interface getUserInfoProps {
+	userId: string;
+} 
+
+declare interface FooterProps {
+	user: User;
+	type?: 'mobile' | 'desktop'
+}	
+
+
+declare interface SiderbarProps {
+	user: User;
+}

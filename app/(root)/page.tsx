@@ -1,16 +1,11 @@
 import HeaderBox from '@/components/HeaderBox'
 import RightSidebar from '@/components/RightSidebar'
 import TotalBalanceBox from '@/components/TotalBalanceBox'
+import { getLoggedInUser } from '@/lib/actions/user.actions'
 import React from 'react'
 
-export default function page() {
-	const loggedInUser = {
-		name: 'John Doe',
-		id: '1',
-		email: 'johndoe@gmail.com',
-		firstName: 'John',
-		lastName: 'Doe'
-	}
+export default async function page() {
+	const loggedInUser = await getLoggedInUser();
 	const accountsData: Account[] = [
 		{
 			id: '1',
@@ -34,7 +29,7 @@ export default function page() {
 						type='greeting'
 						title='Welcome'
 						subtitle='Access & manage your account and transactions efficiently.'
-						user={loggedInUser?.name ?? "Guest"}
+						user={loggedInUser?.firstName ?? "Guest"}
 					/>
 					<TotalBalanceBox 
 						accounts={[

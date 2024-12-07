@@ -32,3 +32,5 @@ export const authFormSchema = (type: 'sign-in' | 'sign-up') => z.object({
     email: z.string().email(),
     password: z.string().min(8),
 });
+
+export const parseStringify = (value: unknown) => JSON.parse(JSON.stringify(value));
